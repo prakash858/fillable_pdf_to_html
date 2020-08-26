@@ -1,16 +1,17 @@
 *{
     margin:0;
-    font-family:Calibri;
+   font-family:Arial;
+  
   
    
    
 }
 #box-1{
-    max-width:612px;
-    height:792px;
+    max-width:100%;
+    height:297vh;
     background:#393f6b;
     position:relative;
-    margin-left:320px;
+    
 
 }
 #box-1 #box-2{
@@ -23,12 +24,12 @@
     left:5%;
 }
 #box-1 #box-2 #content-box{
-    width:75%;
+    width:80%;
     height:80%;
     background:#f5f5f5;
     position:absolute;
     top:10%;
-    left:12%;
+    left:10%;
     border:5px ridge rgb(136, 132, 132);
 }
 #content-box{
@@ -36,15 +37,21 @@
 
 }
 #content-box h2{
-    font-size:40px;
+    font-size:60px;
     font-weight:400;
-    margin:100px 0 180px 0;
+    line-height:100px;
+    margin:250px 0 500px 0;
 
 }
+#content-box p{
+    font-size:25px;
+}
+
 .description{
-    max-width:612px;
-    margin-left:320px;
+    max-width:100%;
     text-align:justify;
+    margin:10px 150px 60px 150px;
+    font-size:18px;
 }
 .title{
     text-align:center;
@@ -54,8 +61,7 @@
     color:#006fc0;
     margin-bottom:25px;
 }
-
- .intro input{
+.intro input{
     border:0;
     outline:0;
     border-bottom:1px solid black;
@@ -67,14 +73,18 @@
     background:transparent;
 }
 .list{
-    padding-left:15px;
+    padding-left:20px;
+}
+.list ol{
+    padding-left:52px;
 }
 .list li{
-    padding-left:25px;
+    padding-left:30px;
 }
 .list p{
-    padding-left:25px;
+    padding-left:30px;
 }
+
 .initial input{
     border:0;
     outline:0;
@@ -86,5 +96,196 @@
     background:transparent;
 }
 .highlight{
-    font-size:17px;
+    font-size:20px;
 }
+
+ .check-box{
+     position:relative;
+     width:25px;
+     height:25px;
+ }
+ 
+.approve-heading{
+    margin-left:600px;     
+}
+
+
+.right input{
+    width:225px;
+    height:30px;
+    border:0;
+    border-bottom:2px solid black;
+    background:#f1f3ff;
+    font-size:17px;
+    outline:0;
+}
+.right input:focus{
+    background:transparent;
+}
+.left input{
+    width:225px;
+    height:30px;
+    border:0;
+    border-bottom:2px solid black;
+    background:#f1f3ff;
+    font-size:17px;
+    outline:0;
+}
+.left input:focus{
+    background:transparent;
+}
+.right{
+    margin-left:600px;
+    margin-top:-130px;
+}
+.left{
+    margin-left:120px;
+}
+
+.form h2{
+    text-align:center;
+    color:#006fc0;
+}
+.form p{
+    text-align:center;
+}
+ .contract-form, .fee-schedule,.authorization{
+   border:1px solid black;
+    margin:0 150px 0 150px;
+    border-top:0;
+}
+.contract-form ul li{
+    list-style:none;
+    margin-left:-40px;
+    border-top:1px solid black;
+}
+.contract-form ul li input[type="text"]{
+    width:20%;
+    border:0;
+    outline:0;
+    background-color:#f1f3ff;
+    font-size:17px;  
+
+}
+.contract-form ul li input[type="text"]:focus{
+    background:transparent;
+}
+.contract-form ul li input[type="radio"]{
+    width:25px;
+    height:20px;
+    cursor:pointer;
+}
+.heading{
+    color:white;
+    background:rgb(32,55,100);
+   
+}
+
+.membership{
+    float:left;
+    background:#fff2cc;
+    width:64.5%;
+    margin:0;
+    border-bottom:1px solid black;
+    border-left:1px solid black;
+    
+}
+.commission{
+   float:right;
+    background:#ddebf7;
+    width:35.28%;
+    padding-top:8px;
+    border-bottom:1px solid black;
+    border-right:1px solid black;
+}
+
+.membership ul {
+    list-style:none;
+    margin:15px 0 0 -36px;
+    line-height:30px;
+    
+}
+
+.paid {
+   line-height:30px;
+   margin-right: 40px;
+}
+.paid ul, .paid li{
+    list-style: none;
+    width: 100%;
+    padding:0;
+    text-align:right;
+}
+.paid li .label{
+    font-weight:bold;
+    padding-right:30px;
+   
+}
+.authorization ul li{
+    list-style:none;
+    border-bottom:2px solid black;
+      text-align:center;
+      list-style:none;
+}
+.representative{
+    float:left;
+    padding: 0 79px 0 90px;
+    border:1px solid black;
+    border-top:0;
+    border-right:0;
+}
+.member{
+    float:right;
+   padding:0 130px 0 70px;
+   border:1px solid black;
+   border-top:0;
+}
+
+.authorization ul li input{
+    width: 250px;
+    height:25px;
+    border:0;
+    outline:0;
+    background-color:#f1f3ff;
+    font-size:17px;  
+}
+.authorization ul li input:focus{
+    background:transparent;
+}
+
+@media only screen and (max-width:1000px){
+    #box-1{
+        width:50%;;
+        height:100vh;
+        padding-left:120px;
+    }
+   #box-2 {
+    margin-left:-2px;
+    }
+    #content-box{
+        margin-left:-5px;
+    }
+    #content-box h2{
+        font-size:20px;
+        line-height:35px;
+        margin:60px 0 120px 0;
+    }
+    #content-box p{
+        font-size:8px;   
+    }
+
+    .description{
+       max-width:100%;
+       font-size:8px;
+       margin:0 12px 0 12px;  
+    }
+    .intro input{
+        width:40px;
+        height:10px;
+    }
+    .title, .title h2{
+        margin-bottom:10px;
+    }
+    
+}   
+
