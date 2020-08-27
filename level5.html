@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css" rel="stylesheet" type="text/css">
-    <link href="mobile.css" rel="stylesheet" type="text/css">
     <title>Level-5</title>
 
 </head>
@@ -32,8 +31,8 @@
                 EWA Membership and Independent Contractor Representative</b>
         </div>
         <p class="intro">This representative contract (the contract), executed in duplicate originals as of <input
-                type="text">
-            1, 2020 between <input type="text"> (hereinafter called “Rep”)
+                type="text"  name="" value="">
+            1, 2020 between <input type="text"  name="" value=""> (hereinafter called “Rep”)
             and the <strong>EWA Membership</strong> (herein after referred to as “Association”).
         </p><br>
         <ol class="list">
@@ -139,7 +138,7 @@
             <b>
                 <li>Marketing</li>
             </b><br>
-            <p class="initial"><b>Initial[<input type="text">]</b></p><br>
+            <p class="initial"><b>Initial[<input type="text"  name="initial" value="">]</b></p><br>
             <p>As an appointed agent/broker of EWA Membership products, <b class="highlight">Rep is not allowed
                     to post, advertise or promote materials on any publicly accessible
                     platform.</b> This includes, but is not limited to print, internet, social media or open
@@ -217,12 +216,16 @@
         <p class="approve-heading"><b>EWA Membership</b></p><br><br><br>
         <p class="approval">
         <p class="left">
-            <span><input type="text"><br>Signature of Representative</span><br><br>
-            <span><input type="text"><br>Print Name</span>
+            <span><canvas id="signature-pad" class="signature-pad" width="250" height="100"></canvas>
+                <button id="clear">Clear</button>
+                <br>Signature of Representative</span><br><br>
+            <span><input type="text"  name="rep-name" value=""><br>Print Name</span>
         </p>
         <p class="right">
-            <span><input type="text"><br>Association Officer Signature</span><br><br>
-            <span><input type="text"><br>Print Name and Title</span>
+            <span><canvas id="signature-pad1" class="signature-pad1" width="250" height="100"></canvas>
+                <button id="clear1">Clear</button>
+                <br>Association Officer Signature</span><br><br>
+            <span><input type="text"  name="officer-name" value=""><br>Print Name and Title</span>
         </p>
         </p>
     </div>
@@ -233,28 +236,28 @@
             <ul>
                 <li>Representative ID #:<input type="text"></li>
                 <li>
-                    First Name:<input type="text"> MI:<input type="text"> Last Name:<input type="text">
+                    First Name:<input type="text" name="first-name" value=""> MI:<input type="text"> Last Name:<input type="text" name="last-name" value="">
                 </li>
                 <li>
-                    Date of Birth:<input type="text"> Social Security #:<input type="text">
+                    Date of Birth:<input type="text" name="dob" value=""> Social Security #:<input type="text" name="social-security" value="">
                 </li>
-                <li>Street Address:<input type="text"> </li>
+                <li>Street Address:<input type="text" name="stree-address" value=""> </li>
                 <li>
-                    City:<input type="text"> State:<input type="text"> Zip Code:<input type="text">
+                    City:<input type="text" name="city" value=""> State:<input type="text" name="state" value=""> Zip Code:<input type="text" name="zip-code" value=""> 
                 </li>
                 <li>
-                    Telephone #:<input type="text"> Fax #:<input type="text"> Cell Phone #:<input type="text">
+                    Telephone #:<input type="text" name="telephone" value=""> Fax #:<input type="text" name="fax" value=""> Cell Phone #:<input type="text" name="cell-phone" value="">
                 </li>
-                <li>Business or Corporate Name:<input type="text"> </li>
+                <li>Business or Corporate Name:<input type="text" name="business" value=""> </li>
                 <li>
-                    <pre>Pay to (check one):    Individual:      <input type="radio" name="radio">      Business:   <input type="radio" name="radio"></pre>
+                    <pre>Pay to (check one):    Individual:      <input type="radio" name="radio" value="individual">      Business:   <input type="radio" name="radio" value="business"></pre>
                 </li>
                 <li>Paid by:ACH Online</li>
-                <li>ACH Information (if applicable) Bank Name:<input type="text"></li>
+                <li>ACH Information (if applicable) Bank Name:<input type="text" name="bank" value=""></li>
                 <li>
-                    <pre>Routing #:<input type="text">        Account #:<input type="text"></pre>
+                    <pre>Routing #:<input type="text" name="routing" value="">        Account #:<input type="text" name="account" value=""></pre>
                 </li>
-                <li>Email Address:<input type="text"></li>
+                <li>Email Address:<input type="text" name="email" value=""></li>
             </ul>
         </form>
         <div class="fee-schedule">
@@ -325,7 +328,8 @@
     <div class="authorization">
         <div class="representative">
             <ul>
-                <li>Representative Signature<br> <input type="text"></li>
+                <li>Representative Signature<br> <canvas id="signature-pad2" class="signature-pad2" width="305" height="90"></canvas>
+                    <button id="clear2">Clear</button></li>
 
                 <li>Print Name<br> <input type="text"></li>
 
@@ -335,7 +339,8 @@
         </div>
         <div class="member">
             <ul>
-                <li>EWA Membership<br> <input type="text"></li>
+                <li>EWA Membership<br>  <canvas id="signature-pad3" class="signature-pad3" width="305" height="90"></canvas>
+                    <button id="clear3">Clear</button></li>
 
                 <li>Print Name<br> <input type="text"></li>
 
@@ -350,3 +355,59 @@
 
 
 </html>
+<script src="https://cdn.jsdelivr.net/npm/signature_pad@3.0.0-beta.3/dist/signature_pad.umd.min.js"></script>
+<script>
+  var signaturePad = new SignaturePad(
+    document.getElementById("signature-pad"),
+    {
+      backgroundColor: "rgba(255, 255, 255, 0)",
+      penColor: "rgb(0, 0, 0)",
+    }
+  );
+  var cancelButton = document.getElementById("clear");
+  cancelButton.addEventListener("click", function (event) {
+    signaturePad.clear();
+  });
+
+  var signaturePad1 = new SignaturePad(
+    document.getElementById("signature-pad1"),
+    {
+      backgroundColor: "rgba(255, 255, 255, 0)",
+      penColor: "rgb(0, 0, 0)",
+    }
+  );
+  var cancelButton = document.getElementById("clear1");
+
+  cancelButton.addEventListener("click", function (event) {
+    
+    signaturePad1.clear();
+  });
+
+  var signaturePad2 = new SignaturePad(
+    document.getElementById("signature-pad2"),
+    {
+      backgroundColor: "rgba(255, 255, 255, 0)",
+      penColor: "rgb(0, 0, 0)",
+    }
+  );
+  var cancelButton = document.getElementById("clear2");
+
+  cancelButton.addEventListener("click", function (event) {
+    
+    signaturePad2.clear();
+  });
+
+  var signaturePad3 = new SignaturePad(
+    document.getElementById("signature-pad3"),
+    {
+      backgroundColor: "rgba(255, 255, 255, 0)",
+      penColor: "rgb(0, 0, 0)",
+    }
+  );
+  var cancelButton = document.getElementById("clear3");
+
+  cancelButton.addEventListener("click", function (event) {
+    
+    signaturePad3.clear();
+  });
+</script>

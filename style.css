@@ -144,7 +144,7 @@
 .right{
     float:right;
   padding-right:60px;
-    margin-top:-130px;
+    margin-top:-202px;
 }
 .left{
     margin-left:120px;
@@ -273,9 +273,12 @@
 .authorization ul li input:focus{
     background:transparent;
 }
-
-
-
+canvas{
+    cursor:crosshair;
+    border-bottom:2px solid black;
+    background:#f1f3ff;
+   
+}
 @media only screen and (max-width:1000px){
     #box-1{
         width:100%;
@@ -342,7 +345,6 @@
     }
     .approve-heading{
         font-size:10px;
-        padding:0 0 0 20px;
       
     }
     .left{
@@ -350,7 +352,7 @@
         margin: -5px 0 0 -2px;
     }
     .right{
-        padding:54px 0 0 30px;
+        padding:102px 0 0 30px;
     }
     .left input, .right input{
         width:100px;
@@ -388,12 +390,11 @@
     }
     .membership p{
         margin:30px 0 0 2px;
-        font-size:7px;
+        font-size:8px;
     }
     .membership ul{
             line-height:20px;
-            margin-top:px;
-            font-size:7px;
+            font-size:8px;
             
     }
     .commission{
@@ -405,7 +406,7 @@
     }
     .paid ul, .paid li{
         line-height:20px;
-        font-size:6px;    
+        font-size:8px;    
     }
     .paid li .label{
       padding-right:0; 
@@ -415,16 +416,29 @@
         font-size:6px;
         
     }
+    .authorization canvas{
+        width:65px;
+    }
     .authorization ul li input{
         width:65px;
         height:15px;
     }
     .representative{
         margin-left:-1px;
+      
    
     }
   .member{
       margin-bottom:-100px;
-  
+      
 }
+canvas{
+    width:105px;
+}
+    button {
+        width:20px;
+        font-size:6px;
+        padding-left:1px;
+    }
+   
 }
