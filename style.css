@@ -257,7 +257,9 @@
    width:49%;
    border-left:0;
 }
-
+.authorization ul{
+    margin:0;
+}
 
 .authorization ul li input{
     width: 350px;
