@@ -98,6 +98,12 @@
 .highlight{
     font-size:20px;
 }
+.sub-list {
+    padding-left:65px;
+}
+.sub-list li{
+    padding-left:15px;
+}
 
  .check-box{
      position:relative;
@@ -106,7 +112,8 @@
  }
  
 .approve-heading{
-    margin-left:600px;     
+   padding-right:140px;
+    float:right;   
 }
 
 
@@ -135,7 +142,8 @@
     background:transparent;
 }
 .right{
-    margin-left:600px;
+    float:right;
+  padding-right:60px;
     margin-top:-130px;
 }
 .left{
@@ -177,31 +185,40 @@
 }
 .heading{
     color:white;
-    background:rgb(32,55,100);
-   
+    background:rgb(32,55,100);  
 }
-
+.heading p{
+    text-align:left;
+}
+.text{
+    padding-left:200px;
+}
+.level{
+    display:flex;
+    flex-direction:row;
+}
 .membership{
     float:left;
     background:#fff2cc;
-    width:64.5%;
+    width:64%;
     margin:0;
-    border-bottom:1px solid black;
+    
     border-left:1px solid black;
     
 }
 .commission{
    float:right;
     background:#ddebf7;
-    width:35.28%;
+    width:35.7%;
     padding-top:8px;
-    border-bottom:1px solid black;
-    border-right:1px solid black;
 }
-
+.membership p{
+    text-align:left;
+    margin:27px 0 0 2px;
+}
 .membership ul {
     list-style:none;
-    margin:15px 0 0 -36px;
+    margin:0 0 0 -36px;
     line-height:30px;
     
 }
@@ -223,41 +240,45 @@
 }
 .authorization ul li{
     list-style:none;
-    border-bottom:2px solid black;
       text-align:center;
-      list-style:none;
+     line-height:15px;
+
 }
-.representative{
+.representative {
     float:left;
-    padding: 0 79px 0 90px;
     border:1px solid black;
     border-top:0;
-    border-right:0;
+    width:50%;
 }
 .member{
     float:right;
-   padding:0 130px 0 70px;
    border:1px solid black;
    border-top:0;
+   width:49%;
+   border-left:0;
 }
 
+
 .authorization ul li input{
-    width: 250px;
+    width: 350px;
     height:25px;
     border:0;
     outline:0;
     background-color:#f1f3ff;
-    font-size:17px;  
+    font-size:17px; 
+    border-bottom:1px solid black;
 }
 .authorization ul li input:focus{
     background:transparent;
 }
 
+
+
 @media only screen and (max-width:1000px){
     #box-1{
-        width:50%;;
+        width:100%;
         height:100vh;
-        padding-left:120px;
+        margin-right:10px;
     }
    #box-2 {
     margin-left:-2px;
@@ -280,12 +301,128 @@
        margin:0 12px 0 12px;  
     }
     .intro input{
-        width:40px;
+        width:45px;
         height:10px;
+        font-size:9px;
     }
     .title, .title h2{
         margin-bottom:10px;
     }
-    
-}   
-
+    .list{
+        padding-left:8px;
+    }
+    .list ol{
+        padding-left:18px;
+    }
+    .list li{
+        padding-left:10px;
+    }
+    .list p{
+        padding-left:10px;
+    }
+    .initial input{
+        width:25px;
+        height:10px;
+        font-size:9px;
+    }
+    .highlight{
+        font-size:8.5px;
+    }
+    .sub-list {
+        padding-left:30px;
+    }
+    .sub-list li{
+        padding-left:3px;
+    }
+    .check-box{
+        width:13px;
+        height:13px;
+    }
+    .approve-heading{
+        font-size:10px;
+        padding:0 0 0 20px;
+      
+    }
+    .left{
+        width:100%;
+        margin: -5px 0 0 -2px;
+    }
+    .right{
+        padding:54px 0 0 30px;
+    }
+    .left input, .right input{
+        width:100px;
+        height:20px;
+    }
+  
+    .form{
+        font-size:8px;
+        padding-top:10px;
+    }
+    .contract-form, .fee-schedule, .authorization{
+        width:98%;
+       margin-left:1px;
+    }
+    .contract-form ul li input[type="text"]{
+        width:30px;
+        height:15px;
+        font-size:8px;
+    }   
+    .contract-form ul li input[type="radio"]{
+        width:25px;
+        height:10px;
+    }
+    .heading p{
+        font-size:7px;
+    }
+    .text{
+        padding-left:5px;
+        font-size:6px;
+    }
+    .membership{
+        margin-left:-1px;
+        width:55%;
+        
+    }
+    .membership p{
+        margin:30px 0 0 2px;
+        font-size:7px;
+    }
+    .membership ul{
+            line-height:20px;
+            margin-top:px;
+            font-size:7px;
+            
+    }
+    .commission{
+        width:44.56%;
+        padding-top:10px;
+    }
+    .paid{
+        margin-right:3px;
+    }
+    .paid ul, .paid li{
+        line-height:20px;
+        font-size:6px;    
+    }
+    .paid li .label{
+      padding-right:0; 
+      margin-left:-4px;
+    }
+    .authorization{
+        font-size:6px;
+        
+    }
+    .authorization ul li input{
+        width:65px;
+        height:15px;
+    }
+    .representative{
+        margin-left:-1px;
+   
+    }
+  .member{
+      margin-bottom:-100px;
+  
+}
+}
