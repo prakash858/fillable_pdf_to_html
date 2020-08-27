@@ -109,11 +109,13 @@
      position:relative;
      width:25px;
      height:25px;
+     margin-right:15px;
  }
  
 .approve-heading{
    padding-right:140px;
-    float:right;   
+    float:right; 
+    padding-right:210px;  
 }
 
 
@@ -344,15 +346,16 @@ canvas{
         height:13px;
     }
     .approve-heading{
-        font-size:10px;
-      
+        font-size:8px;
+       padding-right:40px;
+     
     }
     .left{
         width:100%;
         margin: -5px 0 0 -2px;
     }
     .right{
-        padding:102px 0 0 30px;
+        padding:110px 0 0 30px;
     }
     .left input, .right input{
         width:100px;
@@ -433,7 +436,7 @@ canvas{
       
 }
 canvas{
-    width:105px;
+    width:85px;
 }
     button {
         width:20px;
